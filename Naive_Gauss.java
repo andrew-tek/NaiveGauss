@@ -1,6 +1,14 @@
-
+/* Andrew Tek
+ * Computer Exercise 2.1.10
+ * Here we implement a naive approach to solving matrix using Gauss's method. As
+ * mentioned in the book we used the following matrix.
+ * 6x(1) - 2x(2) + 3x(3) + 4x(4) = 16
+ *       - 4x(2) + 2x(3) + 2x(4) = -6
+ *                 2x(3) - 5x(4) = -9
+ *                 4x(3) - 13x(4)= -21
+ * When ran the program will output the appropriate values for x.                 
+ */
 public class Naive_Gauss {
-
 	public static void naiveGauss(int n, float [][] a, float [] b, float [] x) {
 		int i, j, k;
 		float sum = 0, xmult;
@@ -23,6 +31,7 @@ public class Naive_Gauss {
 			x[i] = sum / a[i][i];
 		}
 	}
+	
 	public static void main (String [] args) {
 		/*
 		 * 6x(1) - 2x(2) + 3x(3) + 4x(4) = 16
@@ -39,12 +48,11 @@ public class Naive_Gauss {
 		float [] b = {16, -6, -9, -21};
 		float [] x = {0, 0, 0, 0};
 		int n = 4;
-		
 		naiveGauss (n, a, b, x);
 		for (float i : x) {
 			System.out.println(i + "\t");
+			
 		}
-		
-		
+	
 	}
 }
